@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>サイトタイトル</title>
+
+
+  <!-- bootstrap (リセットCSSのために読み込んでますが、なくても動く) -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- ①cssの読み込み -->
+  <link rel="stylesheet" href="css/slide-menu.css">
+
+  <!-- ②jqueryの読み込み -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+  <!-- ③scriptの読み込み -->
+  <script src="js/slide-menu.js"></script>
+
+
+  <!-- デモ用のcss(消してよし) -->
+  <style>
+  @media screen and (min-width: 991px){
+    .red{
+      background: #ff0000;
+    }
+  }
+  </style>
+  <!-- デモ用のcss　ここまで -->
+
+</head>
+
+<body>
+
+<!-- menuボタン
+.spmenu .sp-block をつける
+.sp-wrapの外側に設置すること
+メニューボタンとクローズボタンがimgであります。入れ替えで任意の画像にできます
+ -->
+<p class="spmenu sp-block"><img src="img/menu-btn.svg" alt=""><img src="img/menu-close.svg" alt=""></p>
+<!-- menuボタンここまで -->
+
+<!-- 外側からスライドするナビゲーション
+.sp-nav をつける
+.sp-wrapの外側に設置すること
+ -->
+<nav class="sp-nav">
+  <ul class="list-unstyled">
+    <li class="slidedown"><p>menu1</p>
+        <ul class="list-unstyled">
+          <li><a href="">menu1の中のリスト</a></li>
+          <li><a href="">menu1の中のリスト</a></li>
+          <li><a href="">menu1の中のリスト</a></li>
+          <li><a href="">menu1の中のリスト</a></li>
+        </ul>
+    </li>
+    <li class="slidedown"><p>menu2</p>
+        <ul class="list-unstyled">
+          <li><a href="">menu2の中のリスト</a></li>
+          <li><a href="">menu2の中のリスト</a></li>
+          <li><a href="">menu2の中のリスト</a></li>
+          <li><a href="">menu2の中のリスト</a></li>
+        </ul>
+    </li>
+    <li><p><a href="">menu3</a></p>
+    </li>
+</nav>
+
+
+<!-- メインのコンテンツ
+.sp-wrapをつけたdivで囲みます。
+ -->
+<div class="sp-wrap">
+  <header >
+    ヘッダー
+  </header>
+
+  <div class="contents">
+    <p class="red">※メニューボタンは幅991px以下にしないと出ません</p>
+    <p>ここは[.sp-wrap]エリアです</p>
+    <p>menuボタンは[.spmenu .sp-block]をつける必要があります</p>
+    <p>ナビゲーションには[.sp-nav]をつける必要があります</p>
+    <p>正しい構造で上記のclassつけ、jquery、css、jsを読み込むと動きます。</p>
+    <p>コンテンツ</p>
+    <p>コンテンツ</p>
+    <p>コンテンツ</p>
+    <p>コンテンツ</p>
+    <p>コンテンツ</p>
+    <p>コンテンツ</p>
+    <p>コンテンツ</p>
+    <p>コンテンツ</p>
+  </div>
+
+  <footer>
+    フッター
+  </footer>
+</div><!-- .sp-wrap -->
+</body>
+</html>

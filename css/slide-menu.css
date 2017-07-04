@@ -1,0 +1,100 @@
+/* common */
+.sp-block{
+  display: none;
+}
+.sp-inline{
+  display: none;
+}
+.pc-block{
+  display: block;
+}
+.pc-inline{
+  display: inline;
+}
+/* common ここまで */
+
+/* スマホナビゲーションの記述 */
+.spmenu{
+  width: 44px;
+  height: 44px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 200;
+  transition: .5s;
+}
+.spmenu img:nth-of-type(1),.spmenu.menu-on img:nth-of-type(2){
+  display:block;
+}
+.spmenu.menu-on img:nth-of-type(1),.spmenu img:nth-of-type(2){
+  display:none;
+}
+.sp-nav{
+  width: 80%;
+  position: fixed;
+  top:0;
+  right:0;
+  background: #eee;
+  height: 100%;
+  top:0;
+  right:0;
+  z-index: 200;
+  transform: translate(100%,0);
+  transition: .5s;
+  overflow: scroll;
+}
+.sp-wrap{
+  transition: .5s transform;
+}
+.menu-on{
+  transform: translate(-80vw,0);
+}
+.menu-on-default{
+  transform: translate(0,0);
+}
+.sp-nav ul > li{
+  font-size: 16px;
+  line-height: 50px;
+  border-bottom: 1px solid #fff;
+}
+.sp-nav ul > li > ul{
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.2s;
+  background: #fff;
+}
+.sp-nav ul > li.on > ul{
+  max-height: 1000px;
+  transition: 1s;
+}
+/* スマホナビゲーションここまで */
+
+
+/* bootstrapなブレークポイント */
+/*===============================================
+ 画面の横幅が1200pxまで
+===============================================*/
+@media screen and (max-width: 1199px){
+}
+/*===============================================
+画面の横幅が992pxまで
+===============================================*/
+@media screen and (max-width: 991px){
+  .sp-block{
+    display: block;
+  }
+  .sp-inline{
+    display: inline;
+  }
+  .pc-block{
+    display: none;
+  }
+  .pc-inline{
+    display: none;
+  }
+}
+/*===============================================
+画面の横幅が768pxまで
+===============================================*/
+@media screen and (max-width:767px){
+}
